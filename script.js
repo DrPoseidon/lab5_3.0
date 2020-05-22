@@ -398,7 +398,7 @@ function test1(){
     let S = max - (4*(m*m)/sum_array.length);
     S = S.toFixed(2);//НЕРАВНОМЕРНОСТЬ РАСПРЕДЕЛЕНИЯ
     console.log('S=',S);
-    if(R > 0){
+    if(R > 0 || R == 0){
         dataEntry.innerHTML = '<p style="text-align: center;color:red;">Невозможно рассчитать показатель для ориентированного графа</br>расчет произведен по неориентированному</p>' + `<p style="color:red;border: 2px solid black;border-radius: 5px;">R = ${old_R}</p>` + '</br>' + '<p>Структурная избытычность</p>' + `<p style="color:red;">${R}</p>` + '</br>' + '<p>Неравномерность распределения связей</p>' + `<p style="color:red;">${S}</p>`;
     }
     else{
